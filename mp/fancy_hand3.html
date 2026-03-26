@@ -159,17 +159,13 @@
       osc.freq(freq); osc.start(); envelope.play(osc);
     }
 
-    // 座標映射函數 (針對畫面放大和翻轉處理)
-    function getScreenX(camX, gx) {
-      let vW = width * 1.5;
-      // 原本 x 範圍: 0 到 640
-      // 因為畫面有 scale(-1, 1)，所以 0 對應右邊 (+vW/2)，640 對應左邊 (-vW/2)
-      return width / 2 + map(camX, 0, 640, vW / 2, -vW / 2) + gx;
+    // 簡化座標映射：將座標系強制轉換為原影片大小 (640x480) 的置中空間
+    function getScreenX(camX) {
+      return camX - 320;
     }
 
-    function getScreenY(camY, gy) {
-      let vH = height * 1.5;
-      return height / 2 + map(camY, 0, 480, -vH / 2, vH / 2) + gy;
+    function getScreenY(camY) {
+      return camY - 240;
     }
 
     function draw() {
@@ -180,16 +176,20 @@
       let gy = (glitchTimer > 0) ? random(-15, 15) : 0;
       if (glitchTimer > 0) glitchTimer--;
 
+      // 以短邊為基準放大，確保畫面滿版不變形，並再乘 1.2 倍
+      let scaleF = max(width / 640, height / 480) * 1.2;
+
       push();
-      // 畫面放大 1.5 倍並置中
+      // 將繪圖原點移至畫面中心點
       translate(width / 2 + gx, height / 2 + gy);
-      scale(-1, 1);
+      scale(scaleF);
+
+      // --- 繪製 Webcam 影像 ---
+      push();
+      scale(-1, 1); // 鏡像翻轉
       imageMode(CENTER);
-      // Cyberpunk style tint
       tint(red(mainColor), green(mainColor), blue(mainColor), 200);
-      let vW = width * 1.5;
-      let vH = height * 1.5;
-      image(video, 0, 0, vW, vH);
+      image(video, 0, 0, 640, 480);
       pop();
 
       let targetScore = 0;
@@ -200,24 +200,31 @@
         for (let i = 0; i < hands.length; i++) {
           let hand = hands[i];
           let indexTip = hand.keypoints[8];
-          let tx = getScreenX(indexTip.x, gx);
-          let ty = getScreenY(indexTip.y, gy);
+          
+          let nativeX = getScreenX(indexTip.x);
+          let nativeY = getScreenY(indexTip.y);
 
-          checkButtons(tx, ty);
-          drawSciFiSkeleton(hand, gx, gy);
-          drawFingertips(hand, gx, gy);
-          drawCursor(tx, ty);
+          // 計算全域螢幕座標以檢查按鈕觸發
+          let globalX = width / 2 + gx + nativeX * scaleF;
+          let globalY = height / 2 + gy + nativeY * scaleF;
+
+          checkButtons(globalX, globalY);
+          
+          drawSciFiSkeleton(hand);
+          drawFingertips(hand);
+          drawCursor(nativeX, nativeY);
         }
 
         if (hands.length === 2) {
-          let h1x = getScreenX(hands[0].keypoints[9].x, gx);
-          let h1y = getScreenY(hands[0].keypoints[9].y, gy);
-          let h2x = getScreenX(hands[1].keypoints[9].x, gx);
-          let h2y = getScreenY(hands[1].keypoints[9].y, gy);
+          let h1x = getScreenX(hands[0].keypoints[9].x);
+          let h1y = getScreenY(hands[0].keypoints[9].y);
+          let h2x = getScreenX(hands[1].keypoints[9].x);
+          let h2y = getScreenY(hands[1].keypoints[9].y);
 
           let d = dist(h1x, h1y, h2x, h2y);
-          let proximity = map(d, 50, 1000, 1, 0, true);
-          drawEnergyLink(h1x, h1y, h2x, h2y, proximity, gx, gy);
+          // 距離 50~450 之間為有效能量連結
+          let proximity = map(d, 50, 450, 1, 0, true);
+          drawEnergyLink(h1x, h1y, h2x, h2y, proximity);
 
           if (getAudioContext().state === 'running') {
             linkOsc.amp(map(proximity, 0, 1, 0.05, 0.5), 0.1);
@@ -232,7 +239,9 @@
         linkOsc.amp(0, 0.5);
       }
 
-      // 分數平滑上升/下降
+      pop(); // 離開縮放空間
+
+      // 介面層（不跟隨影像縮放，保持清晰且尺寸固定）
       score = lerp(score, targetScore, 0.1);
       if (score > highScore) highScore = score;
 
@@ -276,7 +285,7 @@
       text("POW:" + int(score), startX - 10, startY - sHeight);
     }
 
-    function drawEnergyLink(p1x, p1y, p2x, p2y, k, gx, gy) {
+    function drawEnergyLink(p1x, p1y, p2x, p2y, k) {
       let linkColor = lerpColor(mainColor, color(255, 0, 255), k);
       strokeWeight(3 + k * 12);
       stroke(linkColor);
@@ -301,25 +310,25 @@
       });
     }
 
-    function drawSciFiSkeleton(hand, gx, gy) {
+    function drawSciFiSkeleton(hand) {
       stroke(mainColor, 180);
       strokeWeight(3);
       let connections = handPose.getConnections();
       for (let i = 0; i < connections.length; i++) {
         let a = connections[i][0], b = connections[i][1];
-        let ax = getScreenX(hand.keypoints[a].x, gx);
-        let ay = getScreenY(hand.keypoints[a].y, gy);
-        let bx = getScreenX(hand.keypoints[b].x, gx);
-        let by = getScreenY(hand.keypoints[b].y, gy);
+        let ax = getScreenX(hand.keypoints[a].x);
+        let ay = getScreenY(hand.keypoints[a].y);
+        let bx = getScreenX(hand.keypoints[b].x);
+        let by = getScreenY(hand.keypoints[b].y);
         line(ax, ay, bx, by);
       }
     }
 
-    function drawFingertips(hand, gx, gy) {
+    function drawFingertips(hand) {
       [4, 8, 12, 16, 20].forEach(idx => {
         let k = hand.keypoints[idx];
-        let x = getScreenX(k.x, gx);
-        let y = getScreenY(k.y, gy);
+        let x = getScreenX(k.x);
+        let y = getScreenY(k.y);
         fill(mainColor); noStroke(); circle(x, y, 10);
         fill(255); textSize(10); textAlign(LEFT); text(` n${idx}`, x + 8, y);
       });
