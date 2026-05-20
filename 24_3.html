@@ -1,0 +1,959 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>早晨財經小白導航 — 皓哥速讀學習平台</title>
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Noto Sans TC', sans-serif;
+    }
+    /* 自訂滾動條 */
+    ::-webkit-scrollbar {
+      width: 6px;
+      height: 6px;
+    }
+    ::-webkit-scrollbar-track {
+      background: #0f172a;
+    }
+    ::-webkit-scrollbar-thumb {
+      background: #334155;
+      border-radius: 3px;
+    }
+    ::-webkit-scrollbar-thumb:hover {
+      background: #475569;
+    }
+  </style>
+</head>
+<body class="bg-slate-950 text-slate-100 min-h-screen flex flex-col antialiased selection:bg-teal-500 selection:text-slate-900">
+
+  <!-- 頂部導航欄 -->
+  <header class="border-b border-slate-800 bg-slate-900/80 backdrop-blur sticky top-0 z-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
+      <div class="flex items-center space-x-3">
+        <div class="w-10 h-10 rounded-xl bg-gradient-to-tr from-teal-500 to-emerald-400 flex items-center justify-center shadow-lg shadow-teal-500/20">
+          <svg class="w-6 h-6 text-slate-950" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"></path>
+          </svg>
+        </div>
+        <div>
+          <h1 class="font-black text-lg tracking-wider text-transparent bg-clip-text bg-gradient-to-r from-teal-400 to-emerald-300">早晨財經小白導航</h1>
+          <p class="text-[10px] text-slate-400 font-medium">基於【早晨財經速解讀】28篇核心文獻唯一開發</p>
+        </div>
+      </div>
+      <div class="flex items-center space-x-3">
+        <span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-semibold bg-teal-500/10 text-teal-400 border border-teal-500/20">
+          <span class="w-1.5 h-1.5 rounded-full bg-teal-400 animate-pulse mr-1.5"></span>
+          2026年3月 - 5月數據全收錄
+        </span>
+      </div>
+    </div>
+  </header>
+
+  <!-- 主體容器 -->
+  <main class="flex-grow max-w-7xl w-full mx-auto px-4 sm:px-6 lg:px-8 py-6 space-y-8">
+
+    <!-- 宏觀看板 / 時代背景簡介 -->
+    <section class="bg-slate-900/40 border border-slate-800 rounded-3xl p-6 sm:p-8 relative overflow-hidden">
+      <div class="absolute top-0 right-0 w-96 h-96 bg-teal-500/5 rounded-full filter blur-3xl pointer-events-none"></div>
+      <div class="absolute bottom-0 left-0 w-96 h-96 bg-emerald-500/5 rounded-full filter blur-3xl pointer-events-none"></div>
+      
+      <div class="relative z-10 space-y-6">
+        <div class="max-w-3xl">
+          <span class="text-xs font-bold text-teal-400 tracking-widest uppercase">小白行前說明書</span>
+          <h2 class="text-2xl sm:text-3xl font-extrabold text-white mt-2 leading-tight">2026 年，全球資本市場正在經歷「資產定價邏輯重置」！</h2>
+          <p class="text-slate-300 text-sm mt-3 leading-relaxed">
+            跟著「皓哥」與「雪婷」的腳步，我們發現這三個月內，市場不再單純追逐科技美夢。當<span class="text-amber-400 font-semibold">美債殖利率直逼 5.2%</span>、<span class="text-amber-400 font-semibold">中東開戰使油價逼近 100 美元</span>，資金正快速從虛幻的軟體夢境移往實體硬體與基礎設施。快來點選下方功能，一鍵看懂這些對你荷包的真實影響！
+          </p>
+        </div>
+
+        <!-- 3大核心痛點快速導航 -->
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mt-4">
+          <div class="bg-slate-950/60 border border-slate-800/80 rounded-2xl p-5 hover:border-teal-500/30 transition duration-300 group">
+            <div class="w-10 h-10 rounded-lg bg-red-500/10 flex items-center justify-center mb-3 text-red-400 group-hover:scale-110 transition duration-300">
+              <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path></svg>
+            </div>
+            <h3 class="font-bold text-slate-200 text-sm">中東地緣政治與高油價</h3>
+            <p class="text-slate-400 text-xs mt-1 leading-relaxed">美伊衝突擴大與荷姆茲海峽危機，讓原油成了 2026 全球最燙手的避險與通膨核心。</p>
+          </div>
+          <div class="bg-slate-950/60 border border-slate-800/80 rounded-2xl p-5 hover:border-teal-500/30 transition duration-300 group">
+            <div class="w-10 h-10 rounded-lg bg-teal-500/10 flex items-center justify-center mb-3 text-teal-400 group-hover:scale-110 transition duration-300">
+              <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"></path></svg>
+            </div>
+            <h3 class="font-bold text-slate-200 text-sm">AI 軍備競賽與物理瓶頸</h3>
+            <p class="text-slate-400 text-xs mt-1 leading-relaxed">硬體端高歌狂飆，但電力與 Token 成本極度燒錢，市場正瘋狂質疑：這泡沫多大？</p>
+          </div>
+          <div class="bg-slate-950/60 border border-slate-800/80 rounded-2xl p-5 hover:border-teal-500/30 transition duration-300 group">
+            <div class="w-10 h-10 rounded-lg bg-emerald-500/10 flex items-center justify-center mb-3 text-emerald-400 group-hover:scale-110 transition duration-300">
+              <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+            </div>
+            <h3 class="font-bold text-slate-200 text-sm">被動式 ETF 與台股挑戰</h3>
+            <p class="text-slate-400 text-xs mt-1 leading-relaxed">高股息與主動式 ETF 瘋搶錢，台股突破 4 萬大關，是內資奇蹟還是結構扭曲？</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 功能雙欄配置 -->
+    <div class="grid grid-cols-1 lg:grid-cols-12 gap-8">
+      
+      <!-- 左欄：財經速讀日曆 & 導報匯出 (佔 7 欄) -->
+      <div class="lg:col-span-7 space-y-6">
+        <div class="bg-slate-900 border border-slate-800 rounded-3xl p-6 space-y-6">
+          <div class="flex items-center justify-between border-b border-slate-800 pb-4">
+            <div class="flex items-center space-x-2">
+              <span class="p-2 rounded-lg bg-teal-500/10 text-teal-400">
+                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"></path></svg>
+              </span>
+              <div>
+                <h3 class="font-bold text-lg text-white">財經速讀時空機</h3>
+                <p class="text-xs text-slate-400">點選以下日期，解鎖當天皓哥精華財經週記</p>
+              </div>
+            </div>
+            <button id="exportBtn" class="bg-teal-500 hover:bg-teal-400 text-slate-950 font-bold text-xs px-3.5 py-2 rounded-xl transition duration-150 flex items-center space-x-1 shadow-lg shadow-teal-500/10">
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"></path></svg>
+              <span>一鍵匯出學習卡</span>
+            </button>
+          </div>
+
+          <!-- 日期快速選擇網格 -->
+          <div class="space-y-2">
+            <label class="block text-xs font-bold text-slate-400 uppercase tracking-widest">選擇特定集數日期：</label>
+            <div class="flex flex-wrap gap-2 max-h-40 overflow-y-auto p-1 bg-slate-950/50 rounded-2xl border border-slate-800/80" id="dateGrid">
+              <!-- JS 會動態注入 28 個日期 -->
+            </div>
+          </div>
+
+          <!-- 精華解析面板 -->
+          <div id="digestCard" class="bg-slate-950/50 border border-slate-800 rounded-2xl p-6 space-y-5 transition duration-300 relative">
+            <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-3 border-b border-slate-800 pb-4">
+              <div class="space-y-1">
+                <span id="cardDate" class="text-xs font-black text-teal-400 tracking-wider"></span>
+                <h4 id="cardTitle" class="text-base sm:text-lg font-bold text-white leading-snug"></h4>
+              </div>
+              <span id="cardType" class="self-start sm:self-center px-3 py-1 rounded-full text-[10px] font-bold bg-slate-800 text-slate-300 border border-slate-700 whitespace-nowrap">【早晨財經速解讀】</span>
+            </div>
+
+            <!-- 關鍵字 -->
+            <div class="flex flex-wrap gap-1.5" id="cardKeywords">
+              <!-- 動態關鍵字 -->
+            </div>
+
+            <!-- 皓哥核心速讀 -->
+            <div class="space-y-2">
+              <h5 class="text-xs font-bold text-slate-300 flex items-center space-x-1.5">
+                <span class="w-1.5 h-1.5 rounded-full bg-emerald-400"></span>
+                <span>皓哥核心觀點精華</span>
+              </h5>
+              <p id="cardSummary" class="text-slate-300 text-sm leading-relaxed bg-slate-900/40 p-3.5 rounded-xl border border-slate-800/40"></p>
+            </div>
+
+            <!-- 小白理財科普 -->
+            <div class="space-y-2 bg-gradient-to-r from-teal-950/30 to-slate-900/30 border border-teal-500/15 p-4 rounded-xl">
+              <h5 class="text-xs font-bold text-teal-300 flex items-center space-x-1.5">
+                <svg class="w-4 h-4 text-teal-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                <span>小白必修科普學堂</span>
+              </h5>
+              <p id="cardTip" class="text-slate-300 text-xs leading-relaxed"></p>
+            </div>
+          </div>
+        </div>
+
+        <!-- 小白術語速成閃卡 -->
+        <div class="bg-slate-900 border border-slate-800 rounded-3xl p-6">
+          <h3 class="font-bold text-base text-white mb-4 flex items-center space-x-2">
+            <span class="p-1 rounded bg-emerald-500/10 text-emerald-400">
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z"></path></svg>
+            </span>
+            <span>小白核心術語 10秒閃卡</span>
+          </h3>
+          <div class="grid grid-cols-2 sm:grid-cols-3 gap-3">
+            <div onclick="showFlashcard('股債雙殺')" class="cursor-pointer bg-slate-950 hover:bg-slate-900/80 p-3.5 rounded-2xl border border-slate-800 hover:border-teal-500/40 text-center transition duration-200">
+              <p class="font-bold text-xs text-teal-400">📉 股債雙殺</p>
+            </div>
+            <div onclick="showFlashcard('利多出盡')" class="cursor-pointer bg-slate-950 hover:bg-slate-900/80 p-3.5 rounded-2xl border border-slate-800 hover:border-teal-500/40 text-center transition duration-200">
+              <p class="font-bold text-xs text-emerald-400">📰 利多出盡</p>
+            </div>
+            <div onclick="showFlashcard('Token成本')" class="cursor-pointer bg-slate-950 hover:bg-slate-900/80 p-3.5 rounded-2xl border border-slate-800 hover:border-teal-500/40 text-center transition duration-200">
+              <p class="font-bold text-xs text-amber-400">🪙 Token成本</p>
+            </div>
+            <div onclick="showFlashcard('戰略石油')" class="cursor-pointer bg-slate-950 hover:bg-slate-900/80 p-3.5 rounded-2xl border border-slate-800 hover:border-teal-500/40 text-center transition duration-200">
+              <p class="font-bold text-xs text-blue-400">🛢️ 戰略石油</p>
+            </div>
+            <div onclick="showFlashcard('VIX指數')" class="cursor-pointer bg-slate-950 hover:bg-slate-900/80 p-3.5 rounded-2xl border border-slate-800 hover:border-teal-500/40 text-center transition duration-200">
+              <p class="font-bold text-xs text-red-400">⚡ VIX 恐慌指數</p>
+            </div>
+            <div onclick="showFlashcard('金髮女孩經濟')" class="cursor-pointer bg-slate-950 hover:bg-slate-900/80 p-3.5 rounded-2xl border border-slate-800 hover:border-teal-500/40 text-center transition duration-200">
+              <p class="font-bold text-xs text-fuchsia-400">👧 金髮女孩經濟</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 右欄：NotebookLM 問答助理 (佔 5 欄) -->
+      <div class="lg:col-span-5 space-y-6">
+        <div class="bg-slate-900 border border-slate-800 rounded-3xl p-6 flex flex-col h-[600px] relative overflow-hidden">
+          <div class="absolute top-0 right-0 w-64 h-64 bg-teal-500/5 rounded-full filter blur-3xl pointer-events-none"></div>
+          
+          <!-- 問答助理頭部 -->
+          <div class="flex items-center justify-between border-b border-slate-800 pb-4">
+            <div class="flex items-center space-x-2.5">
+              <div class="w-9 h-9 rounded-lg bg-teal-500/10 flex items-center justify-center text-teal-400">
+                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 10h.01M12 10h.01M16 10h.01M9 16H5a2 2 0 01-2-2V6a2 2 0 01-2-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-5l-5 5v-5z"></path></svg>
+              </div>
+              <div>
+                <h3 class="font-bold text-sm text-white flex items-center space-x-1.5">
+                  <span>小白問答助理</span>
+                  <span class="text-[9px] px-1.5 py-0.5 rounded bg-teal-500/20 text-teal-300 font-black tracking-wide">AI 知識庫</span>
+                </h3>
+                <p class="text-[10px] text-slate-400">僅利用上傳的 28 期文件內容進行解答</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- 預置快捷問題 -->
+          <div class="py-2.5 flex flex-wrap gap-1.5 border-b border-slate-800/60 overflow-x-auto whitespace-nowrap">
+            <button onclick="askPreset('為什麼中東開戰，連黃金也會突然跳水跌價？')" class="bg-slate-950 hover:bg-slate-850 border border-slate-800 hover:border-slate-700 text-[10px] text-slate-300 px-2.5 py-1.5 rounded-lg transition duration-150">
+              ❓ 黃金為何大跌？
+            </button>
+            <button onclick="askPreset('什麼是 Token 成本？為什麼皓哥說這是 AI 的唯一解？')" class="bg-slate-950 hover:bg-slate-850 border border-slate-800 hover:border-slate-700 text-[10px] text-slate-300 px-2.5 py-1.5 rounded-lg transition duration-150">
+              ❓ Token 成本是啥？
+            </button>
+            <button onclick="askPreset('台積電公布亮眼財報後為什麼不漲反跌？散戶這時買共同基金好嗎？')" class="bg-slate-950 hover:bg-slate-850 border border-slate-800 hover:border-slate-700 text-[10px] text-slate-300 px-2.5 py-1.5 rounded-lg transition duration-150">
+              ❓ 台積電利多出盡？
+            </button>
+          </div>
+
+          <!-- 聊天記錄區域 -->
+          <div id="chatContainer" class="flex-grow overflow-y-auto py-4 space-y-4 text-xs pr-1">
+            <!-- 歡迎消息 -->
+            <div class="flex items-start space-x-2.5">
+              <div class="w-6 h-6 rounded-full bg-gradient-to-tr from-teal-500 to-emerald-400 flex items-center justify-center text-[10px] font-bold text-slate-950 shrink-0">
+                皓
+              </div>
+              <div class="bg-slate-950/80 border border-slate-800 rounded-2xl p-3.5 max-w-[85%] text-slate-300 leading-relaxed">
+                哈囉小白同學！我是你的專屬財經導師「皓哥 AI 助理」。我已經深刻理解了 2026 年 3 月到 5 月的所有事件精華。
+                <br><br>
+                你可以點擊上方快捷問題，或是直接在下方輸入框詢問關於<span class="text-teal-400 font-semibold">「股債雙殺、AI泡沫、美債突破5%、中東停火與油價」</span>的任何問題喔！
+              </div>
+            </div>
+          </div>
+
+          <!-- 輸入區域 -->
+          <div class="border-t border-slate-800 pt-3">
+            <form id="chatForm" class="flex items-center space-x-2">
+              <input type="text" id="chatInput" placeholder="輸入你想詢問的財經問題..." class="flex-grow bg-slate-950 border border-slate-800 rounded-xl px-3.5 py-2.5 text-xs text-slate-100 placeholder-slate-500 focus:outline-none focus:border-teal-500 transition duration-150">
+              <button type="submit" class="bg-gradient-to-tr from-teal-500 to-emerald-400 hover:from-teal-400 hover:to-emerald-300 text-slate-950 font-black p-2.5 rounded-xl transition duration-150 shadow-lg shadow-teal-500/15 shrink-0">
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </main>
+
+  <!-- 精緻彈窗（小白閃卡詳解） -->
+  <div id="flashcardModal" class="fixed inset-0 bg-slate-950/80 backdrop-blur-sm z-50 items-center justify-center p-4 hidden">
+    <div class="bg-slate-900 border border-slate-800 rounded-3xl max-w-md w-full p-6 space-y-4 relative shadow-2xl">
+      <button onclick="closeFlashcard()" class="absolute top-4 right-4 text-slate-400 hover:text-white transition">
+        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
+      </button>
+      <div class="flex items-center space-x-2 border-b border-slate-800 pb-3">
+        <span id="modalEmoji" class="text-xl"></span>
+        <h4 id="modalTerm" class="text-lg font-black text-white"></h4>
+      </div>
+      <p id="modalExplanation" class="text-sm text-slate-300 leading-relaxed"></p>
+      <div class="bg-teal-950/30 border border-teal-500/20 p-3.5 rounded-xl text-xs text-teal-300 leading-relaxed">
+        <strong>2026年節目對應場景：</strong>
+        <p id="modalScene" class="mt-1 text-slate-300"></p>
+      </div>
+    </div>
+  </div>
+
+  <!-- 精緻彈窗（導報匯出） -->
+  <div id="exportModal" class="fixed inset-0 bg-slate-950/85 backdrop-blur-sm z-50 items-center justify-center p-4 hidden">
+    <div class="bg-slate-900 border border-slate-800 rounded-3xl max-w-lg w-full p-6 space-y-4 relative shadow-2xl max-h-[85vh] flex flex-col">
+      <button onclick="closeExportModal()" class="absolute top-4 right-4 text-slate-400 hover:text-white transition">
+        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
+      </button>
+      
+      <div class="border-b border-slate-800 pb-3 shrink-0">
+        <h4 class="text-base font-black text-white flex items-center space-x-2">
+          <svg class="w-5 h-5 text-teal-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 01-2-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path></svg>
+          <span>預覽即將匯出的財經小白學習卡</span>
+        </h4>
+        <p class="text-xs text-slate-400">系統即將生成便於列印與隨身閱讀的純文字學習單，並複製至剪貼簿</p>
+      </div>
+
+      <div id="exportPre" class="flex-grow overflow-y-auto bg-slate-950/80 border border-slate-800 p-4 rounded-2xl text-[11px] font-mono leading-relaxed text-emerald-400 whitespace-pre-wrap select-text">
+        <!-- JS 動態生成格式化報表 -->
+      </div>
+
+      <div class="flex items-center space-x-3 pt-3 border-t border-slate-800 shrink-0">
+        <button onclick="copyToClipboard()" class="flex-grow bg-teal-500 hover:bg-teal-400 text-slate-950 font-black text-xs py-2.5 rounded-xl transition duration-150">
+          📋 複製至剪貼簿
+        </button>
+        <button onclick="downloadAsText()" class="flex-grow bg-slate-800 hover:bg-slate-700 text-white font-bold text-xs py-2.5 rounded-xl transition duration-150 border border-slate-700">
+          💾 下載文字檔 (.txt)
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- 提示浮動窗 (Toast) -->
+  <div id="toast" class="fixed bottom-6 left-1/2 -translate-x-1/2 bg-slate-900 border border-slate-700 text-teal-300 text-xs font-semibold px-4 py-2.5 rounded-full shadow-2xl transition duration-300 opacity-0 pointer-events-none z-50 flex items-center space-x-2">
+    <svg class="w-4 h-4 text-teal-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+    <span id="toastText">複製成功！</span>
+  </div>
+
+  <!-- 頁腳 -->
+  <footer class="border-t border-slate-800 bg-slate-950 py-6 text-center text-xs text-slate-500">
+    <p>© 2026 早晨財經小白導航. 知識庫內容源於【早晨財經速解讀】皓哥與雪婷之公開對談轉錄。</p>
+  </footer>
+
+  <!-- 核心 JavaScript：完整 28 期節目數據庫 & AI 調研邏輯 -->
+  <script>
+    // 皓哥早晨財經速解讀 28 期核心知識庫數據
+    const financialKnowledgeDB = [
+      {
+        date: "2026-03-04",
+        title: "黃金跳水!避險也沒用?中東危機 能戳破AI泡沫?",
+        keywords: ["中東戰事", "黃金大跌", "流動性交易", "AI泡沫"],
+        summary: "美伊開戰導致道瓊一度暴跌1200點。川普隨即宣布保障能源航運。市場隨即發生黃金跳水，徹底打破「亂世買黃金」的傳統觀點。皓哥指出，市場此刻避的並不是「戰爭」本身，而是「流動性」，預期戰火不會引發長期利率失控。",
+        tip: "傳統避險首選是黃金，但當極端恐慌、航運動盪導致不確定性狂飆時，投資人往往會拋售一切資產（甚至包括黃金、國債）來換取現金與市場重新上車的「極限流動性」！"
+      },
+      {
+        date: "2026-03-06",
+        title: "股債雙殺 美伊衝突擴大?油價破80!美股撐得住?",
+        keywords: ["股債雙殺", "油價破80", "通膨預期", "HIM指標"],
+        summary: "美伊衝突正式擴大，原油價格擊穿80美元，美債十年期收益率跳水拉升。市場憂慮高油價再度引燃通膨。皓哥特別推薦《一本書讀懂經濟指標》（韓：HIM），藉此幫助散戶理解在股債雙殺中如何剔除雜訊。",
+        tip: "【股債雙殺】在極高通膨或通膨預期再起時，高利率會壓抑股票估值，同時也讓固定利息的債券失去吸引力，導致兩大主流市場同步大跌拋售。"
+      },
+      {
+        date: "2026-03-11",
+        title: "供應吃緊!油市要變天?全球能源 減產潮來了?",
+        keywords: ["荷姆茲海峽", "減產潮", "中國綠能優勢", "台灣能源調度"],
+        summary: "美能源部長一度貼文宣稱「海軍護送荷姆茲海峽油輪」隨後刪文，引發原油劇烈震盪。中國近年大力發展再生能源，在太陽能、電解槽等加工能力全球佔比直逼80%。而台灣因進口能源比率極高（達96%），正緊急調度LNG（液化天然氣）穩住電價與通膨。",
+        tip: "荷姆茲海峽是全球原油運輸的咽喉。一旦封鎖，會使各國能源體系面臨壓力測試，導致進口大國如台灣、日本不得不實行高強度電價補貼。"
+      },
+      {
+        date: "2026-03-12",
+        title: "戰術油釋出 油價壓得住?2月通膨穩住 川普算盤能如意?",
+        keywords: ["戰略石油儲備", "2月通膨", "多頭擴散", "傳產補漲"],
+        summary: "白宮試圖釋出戰略石油壓抑原油，2月通膨暫時穩住。皓哥觀察，台股的資金多頭正從AI記憶體、先進封裝等硬體，進一步向矽晶圓、太陽能、鋼鐵、塑化與成熟製程等傳產全面向外擴散補漲。",
+        tip: "當領頭羊（AI半導體）漲多，而通膨數據並未徹底失控時，滿手現金的資金會流入估值極低的传统產業（如塑化、鋼鐵、成熟製程等），這在股市中稱為「板塊輪動」或「獲利擴散」。"
+      },
+      {
+        date: "2026-03-19",
+        title: "鮑爾尬川普!聯準會今年 還會降息嗎?",
+        keywords: ["聯準會高利率", "鮑爾聲明", "1996格林斯潘", "技術性通縮"],
+        summary: "鮑爾指出中東局勢為降息增添不確定。皓哥提出一個極有深度的觀點：能否複製 1996 年格林斯潘時期的「網際網路大革命」？若 AI 能爆發式的提升企業生產力（原本花一塊錢做一樣，現在能做兩樣），翻倍的產能即是天然的「通縮效應」，可在高利率下維持股市牛市。",
+        tip: "正常情況下，高利率會打壓科技股。但如果新技術（如AI、網路）能爆發式地降低生產成本，讓產量成倍增加，這將克服通膨，讓經濟在「不降息」的情況下依然極度繁榮。"
+      },
+      {
+        date: "2026-03-30",
+        title: "股債雙殺 市場還有避風港?美股破底 恐慌潮來了?",
+        keywords: ["VIX指數飆升", "以色列襲擊伊朗能源", "缺油危機", "中油吸收"],
+        summary: "以色列襲擊伊朗能源設施，VIX恐慌指數飆破30。美股跌破年線。東南亞、日本陸續爆出缺油。台灣油價目前仰賴中油高強度補貼，將原本每公升應漲10元壓到1.7~3.7元，中油高強度吸收成本穩住國內通膨。",
+        tip: "恐慌指數 (VIX) 高於 30 代表市場進入極度混亂與無差別拋售。此時最安全的避風港往往是手持現金，或是像台灣這種由政府強力吸收能源成本的內需經濟體體系。"
+      },
+      {
+        date: "2026-03-31",
+        title: "能源危機+記憶體殺盤!美光重挫10%  美股賣壓止不住?",
+        keywords: ["美光大跌", "CTA基金", "ETF踩踏", "被動資金危機"],
+        summary: "美伊危機未緩，AI記憶體報價鬆動，美光暴跌10%。CTA動能基金狂賣1900億美金並反向建立空單。皓哥警示，散戶近年瘋搶高股息與指數型ETF，若大盤持續崩跌，可能引發歷史上罕見的「被動式ETF被動拋售與人踩人踩踏」。",
+        tip: "當市場大跌時，若無數散戶急著贖回ETF，投信會被強迫在市場無差別拋售對應的成分股（如台積電等權值股），這會使本已低迷的市況加速崩跌，這就是「ETF被動踩踏風險」。"
+      },
+      {
+        date: "2026-04-01",
+        title: "美伊將停戰!油價還不跌?美股下一個 利空是什麼?",
+        keywords: ["愚人節停戰", "本益比均值回歸", "NVDA前瞻本益比", "巴菲特持股"],
+        summary: "美伊爆出停火曙光，美股暴漲（道瓊狂升1100點，標普升2.9%）。輝達（NVDA）前瞻本益比從高點的80倍暴跌至19倍，完成估值重塑。巴菲特警告分散風險的代價是錯過了最肥厚的晶片上漲期。",
+        tip: "【本益比均值回歸】當企業賺錢的速度（每股盈餘）遠超過股價飆漲速度時，即使股價不跌，本益比也會急速變小（如 NVDA 19倍）。這代表股票變得十分便宜，極度吸引長線買盤。"
+      },
+      {
+        date: "2026-04-07",
+        title: "中東利空鈍化 美股4月能反攻?亞洲能源大亂 各國補貼戰?",
+        keywords: ["雪梨考察", "利空鈍化", "微軟估值修正", "打底訊號"],
+        summary: "皓哥自澳洲雪梨考察天然氣出口。隨中東衝突利空被市場鈍化，科技巨頭出現打底跡象（微軟本益比由40倍跌落至23倍，回到2022年烏俄戰爭低點）。皓哥提醒小白：市場殺得急，彈得也快，等待乖離修正、分批布局才是良策。",
+        tip: "【利空鈍化】壞消息頻傳、但股價卻不再破底，這表明大部分看空的人都已賣完，市場上的賣壓枯竭，通常預示著底部已經浮現。"
+      },
+      {
+        date: "2026-04-09",
+        title: "戰事不停 股市沒在怕?費半創史高!台股能跟上?",
+        keywords: ["停火協議", "費半創歷史新高", "道瓊飆1300點", "AI月輪動"],
+        summary: "美伊雙方達成停火兩週共識，激勵全球股市。費城半導體暴漲6%直衝歷史新高。皓哥指出，AI硬體的更新競賽是以「月」為單位在淘汰，早期高高在上的概念如今甚至被打趴在底，資金正進行劇烈的板塊重新洗牌。",
+        tip: "AI大賽極其殘酷，沒有永遠的贏家。當新一代架構（如 Blackwell 或更先進者）一推出，上個月的王者可能瞬間淪為昨日黃花，這就是晶片「高速迭代」造成的驚人波動。"
+      },
+      {
+        date: "2026-04-10",
+        title: "美伊停火 油價卻不跌?費半再創高!為何軟體股 還在殺盤?",
+        keywords: ["定價邏輯重置", "實體現金流", "軟體估值壓縮", "硬體至上"],
+        summary: "兩國停談進展順利，標普連七紅。但油價死守99美元不退。全球經濟正迎來「定價邏輯重塑」：資金狂奔至有實體支撐、有當下現金流的「硬體、能源、基礎設施」；而在降 token 成本需求下，靠「虛幻未來成長敘事」撐起的軟體股則遭系統性大殺盤。",
+        tip: "在通膨與高利率籠罩的 2026，『講好聽故事但現在不賺錢（軟體）』的企業在華爾街不香了！現在有實體資產、能立刻供電與產出晶片的『硬體、能源（硬核資產）』才是吸金首選。"
+      },
+      {
+        date: "2026-04-13",
+        title: "美伊談判破裂 反彈結束了?油價炸裂 通膨剎不住?",
+        keywords: ["巴基斯坦談判破裂", "伊朗核計劃", "通膨剎不住", "中期修正"],
+        summary: "JD Vance 領軍的美方代表在巴基斯坦與伊朗談判21小時破裂，因伊朗拒絕放棄核武。脆弱的和平瓦解，原油大彈、通膨預期再起。皓哥認為市場在中期修正中重新對風險進行定價，能在不確定性中活下來的才是贏家。",
+        tip: "國際政治事件直接決定能源通膨。一旦停火破裂，海上保險、運輸成本立即飆升，全球生活成本隨之上升，利率也就不得不長期高掛。"
+      },
+      {
+        date: "2026-04-14",
+        title: "費半又創高!利空鈍化 美股跌不動?AI訂單剎不住",
+        keywords: ["川普威脅", "費半創史高", "移工市場扭曲", "基本面大盤"],
+        summary: "雖然川普宣稱要直接致死打擊在荷姆茲海峽釋放水雷的船隻，但因AI硬體訂單爆量，費半依然抗跌暴衝再創歷史新高。同時，皓哥在節目後半探討台灣高達11萬失聯移工背後，就業市場高度不自由且扭曲的痛點。",
+        tip: "有時候『政治口水』與『基本面』是脫節的。即使各國元首隔空嗆聲，只要全球大廠對晶片與伺服器的『真實商業訂單』不停，半導體股價依然會硬生生被買上去。"
+      },
+      {
+        date: "2026-04-15",
+        title: "台股創高後 下一步四萬?AI法律大戰 誰能受惠?",
+        keywords: ["台股逼近4萬", "高GDP低通膨", "AI法律侵權", "補貼真相"],
+        summary: "台股在AI帶動下逼近4萬大關，台灣出現了罕見的極端黃金歲月：GDP成長高達 7~8%，而官方通膨維持在 1.2%（仰賴政府強迫吸收補貼油電）。另一焦點為 AI 音樂與大模型對傳統版權的法律侵權戰開打，利益分配面臨改寫。",
+        tip: "【金髮女孩經濟】台灣目前『高速經濟成長、低帳面通膨』是全球異數。但這多半來自政府壓制油電漲幅、貼補傳產，小白仍需留意未來的財政補貼退場風險。"
+      },
+      {
+        date: "2026-04-16",
+        title: "戰爭未結束 市場開始慶祝?標普創史高 該追股票嗎?",
+        keywords: ["標普突破7000點", "AI音樂商業化", "Suno", "版權授權大戰"],
+        summary: "標普500歷史性突破7000點，市場情緒逼近狂熱。AI生成技術完全成熟（谷歌推出3分鐘詞曲生成、水果戀愛島AI動畫大紅）。但 AI 音樂巨頭 Suno 與唱片大廠因授權金談判破裂，大模型正與傳統智慧財產巨頭進行慘烈的法庭對決。",
+        tip: "大語言模型（LLM）需要海量人類數據作訓練，當AI大到可以完全取代真人創作時，版權法律戰將爆發。最終誰能獲勝，將直接決定AI應用端的獲利天花板。"
+      },
+      {
+        date: "2026-04-17",
+        title: "高預期魔咒?台積電為何 利多不漲?AI基建缺電缺料 進入撞牆期?",
+        keywords: ["台積電法說會", "利多進出", "缺電缺料瓶頸", "散戶高檔申購"],
+        summary: "台積電公佈驚人財報卻股價下挫，引爆「利多出盡」短線殺盤。皓哥揭露 AI 基礎建設面臨真實的「物理上限」：缺電、高算力材料卡關、供應鏈堵塞。而散戶在此時瘋狂申購基金與高股息ETF，被迫在最繁榮的高檔接盤。",
+        tip: "【利多出盡 (Sell the News)】市場早預期財報極好，並已提前反映在股價。當完美財報公佈，大戶趁散戶瘋狂搶進、基金大量買進的當下順勢倒貨套現，股價反而暴跌！"
+      },
+      {
+        date: "2026-04-24",
+        title: "費半破萬點 硬體狂飆 軟體失速?台股多殺多 股市大換手?",
+        keywords: ["費半破10000點", "軟硬失調", "大換手行情", "地緣戰略書推薦"],
+        summary: "費半歷史性站上10,000點。皓哥指出市場正經歷「大換手」：資金瘋狂買進有營收、能變現的 AI 硬體；但高估值的軟體應用股因未見明確收費模式，估值遭遇無情拋售（軟體失速）。皓哥也推薦了《強權俄羅斯》與《以巴戰爭》等圖解地緣戰略書。",
+        tip: "這好比淘金熱，第一波狂賺的一定是『賣鏟子與牛仔褲的人（AI硬體）』。而現在想靠淘金概念講故事的人（AI軟體與應用），在黃金產量未開出前，估值都會大幅收縮。"
+      },
+      {
+        date: "2026-04-27",
+        title: "大賣空Michael Burry萬點做空!費半漲太多?美伊談判破局 油價煞得住?",
+        keywords: ["Michael Burry做空", "高乖離率修正", "輝達5兆市值", "Intel一日漲24%"],
+        summary: "《大賣空》主角 Michael Burry 宣布在費半破萬點時建立空單。同時，Intel 單日暴漲24%刷1987年紀錄。皓哥指出 Burry 是在跟市場賭一個「極高正乖離率」的修復空間，雖然 AI 是長期趨勢，但高估值的恐慌修復隨時會出現。",
+        tip: "做空代表預期未來會跌。當股價連漲十幾天、偏離移動平均線太遠（正乖離過大），即使基本面再好，也容易遭遇大回調，這就是 Burry 出手的算盤。"
+      },
+      {
+        date: "2026-04-28",
+        title: "台積電條款 買盤剛啟動?為何外資賣 股市卻創高?",
+        keywords: ["外資大賣內資大買", "台積電條款", "金管會鬆綁", "選商品不選股"],
+        summary: "即便外資大舉賣超台股5000億，台股仍因內資投信與被動式 ETF 瘋狂申購、配合金管會鬆綁持股限制的「台積電條款」而屢創歷史新高。皓哥憂慮：市場從「挑選好公司（選股）」變成了「無腦挑商品（ETF）」，造成指數被極少數權值股強制拉高。",
+        tip: "現在大家不看公司營收，只無腦買熱門 ETF。ETF 經理人收了錢，只能根據公式強迫買進台積電等大權值股。這導致外資雖然在賣，台股指數卻被 ETF 的被動資金硬生生買上去！"
+      },
+      {
+        date: "2026-04-29",
+        title: "傳OpenAI沒達標 費半遭挨打?AI泡沫 到底有多大?",
+        keywords: ["OpenAI未達標", "費半重挫3.5%", "AI泡沫質疑", "台灣在地化AI"],
+        summary: "《華爾街日報》驚爆 OpenAI 新用戶及營收未達目標。市場瞬間質疑：巨頭砸了千億買硬體，最下游應用端卻無法變現？費半狂瀉3.5%。不過台灣在地 AI 應用（如碩網AI客服、碩比醫療臨床機器人）多點開花，展現頑強韌性。",
+        tip: "如果世界上最厲害的 AI 公司（OpenAI）都開始賺不到足夠的錢，那麽之前花天價買晶片的巨頭們（微軟、Meta、Google）將面臨巨大的資本開支回收壓力，這就是市場憂心 AI 重演網路泡沫的主因。"
+      },
+      {
+        date: "2026-04-30",
+        title: "油價狂飆!鮑爾交棒 美股還有戲?AI支出失控 巨頭賺得回來嗎?",
+        keywords: ["鮑爾交棒", "Meta資本支出失控", "台股4萬速限", "搶高股息"],
+        summary: "鮑爾將交棒給新一任主席。Meta財報上調資本開支引發股價重挫，顯示支出失控。而台股從3萬衝到4萬僅花3個多月，主動型與被動型高股息ETF在國內搶奪銀行存款，高收益行情讓資金進入極度擁擠期。",
+        tip: "【資本支出 (CAPEX)】公司購買伺服器等硬體設備的開銷。這是一把雙刃劍：支出太大，股東會開始擔憂利潤縮水與無法回收；但如果不支出，又怕在 AI 軍備競賽中徹底掉隊。"
+      },
+      {
+        date: "2026-05-01",
+        title: "Q1年增13% 台灣經濟 40年來最好?沒人理油價 美股再創高?",
+        keywords: ["台灣GDP飆13%", "無視油價創高", "Apple 50年發展", "終端整合"],
+        summary: "台灣首季GDP年增率飆13%，皓哥稱「40年最佳經濟期」。同時美股無視油價狂飆，繼續歷史性新高。皓哥推薦《Apple 50年發展史》，點出蘋果向來不是直接在雲端和人搞AI軍備，而是把現有技術整合進最強大的「個人消費終端」，依然不可忽視。",
+        tip: "蘋果的秘密在於『終端整合』。它不一定要在伺服器和微軟硬碰硬，只要能把AI完美、順暢地融入你的iPhone與iPad，小白消費者就願意買單，這在商業上常能後發先至。"
+      },
+      {
+        date: "2026-05-06",
+        title: "美股狂牛 現在還能追?美長債利率破5% 通膨恐慌快來了?",
+        keywords: ["美長債利率5%", "財政部瘋狂發債", "川普減稅後果", "股市資金吸黑洞"],
+        summary: "美股牛市狂飆。但美國30年期長債殖利率爆衝突破5.2%。主因在於川普大減稅後美國政府稅收大不如前，赤字驚人。財政部被迫大舉增加發債（本季上調至1890億美元，第三季再借6700億美元），市場擔憂超高無風險利率會成為股市資金的大黑洞。",
+        tip: "【美債殖利率的吸引力】如果買風險近乎為零的美國政府國債，每年能穩穩拿超過 5% 的利息，那大家為什麼要冒著崩盤風險把錢放在高本益比的股市呢？這會對股市產生極大資金抽離壓力。"
+      },
+      {
+        date: "2026-05-07",
+        title: "川習會在即 美伊談判有譜!油價回跌 市場只剩利多?",
+        keywords: ["川習會預期", "道瓊重返5萬點", "獲利全面擴散", "25天大漲54%"],
+        summary: "中美釋放關稅調降訊號，美伊協議露出重大曙光，道瓊歷史性站上5萬大關，費半25天暴漲54%創網路泡沫以來最狂單月漲幅。關鍵是，標普11個產業部門的「中位數公司獲利」均出現4年來最高正成長，代表獲利終於從少數巨頭擴散至全市場。",
+        tip: "之前大盤上漲全是輝達等七大巨頭在撐，其他小公司都在跌。現在連傳統產業、金融與零售企業的獲利也全面好轉，這代表牛市有真實的經濟實體支撐，變得更為健康與安全。"
+      },
+      {
+        date: "2026-05-08",
+        title: "AI狂牛 誰會是輸家?AI將重演泡沫!還是改變歷史?",
+        keywords: ["油價百元保衛戰", "一美元流浪記", "雙軸全球化", "蝴蝶效應"],
+        summary: "原油在百元附近震盪，美股週四高檔修正。皓哥隆重推薦《一美元的全球流浪記》，揭示一美元如何從美國流向中國工廠、非洲油田、中東戰局，最終流回華爾街，展現出高度全球化的金融蝴蝶效應與雙軸邏輯。",
+        tip: "這世界上沒有孤立的財經新聞。中東一顆炸彈、川普的一紙關稅，都會透過『美元流動性』像多米諾骨牌一樣，最終影響到我們巷口便當的價格跟你的證券帳戶。"
+      },
+      {
+        date: "2026-05-11",
+        title: "台韓領漲全球?AI狂潮東移 主升段到了?",
+        keywords: ["就業弱引燃降息", "AI東移", "比特幣2026慘跌", "主升段搶進"],
+        summary: "美農就業低於預期引發降息憧憬，資金大舉「東移」。由於晶片實體與產能全在亞洲，台、韓兩國半導體領漲全球。在2026全球大通膨資產飆漲中，連長債都回到正報酬，唯獨比特幣下挫8.4%，凸顯實體硬實力資產的全面勝出。",
+        tip: "全世界在 2026 終於認清一件事：AI 大腦即使在美國，但沒有台灣、韓國的實體硬體晶片與先進代工，AI就動不起來！這也就是『AI狂潮東移』讓台灣股市成為主升段王者的根本原因。"
+      },
+      {
+        date: "2026-05-15",
+        title: "川習會再降關稅 美中釋禮包?為何美股 沒人想下車?",
+        keywords: ["北京川習會", "降稅大禮包", "科技邊界控制", "Mustafa Suleyman"],
+        summary: "北京川習會傳出降稅大禮包，道瓊重回5萬點，輝達市值暴衝至5.7兆美元。皓哥導讀 Mustafa Suleyman 著作《The Coming Wave》，深刻討論科技巨頭在追求 AI 無限科學理想與安全、商業利益與政府權利邊界之間的激烈交鋒與權力角力。",
+        tip: "美中這兩個超級大國在經歷一系列鬥爭後，終於發現高關稅對大家都沒好處，因而互送降關稅大禮。這大幅降低跨國科技大廠的供應鏈成本，讓全球股市吃下一顆大定心丸！"
+      },
+      {
+        date: "2026-05-20",
+        title: "520資金大逃殺 4萬守得住?AI軍備太燒錢 降Token成本唯一解?",
+        keywords: ["520大逃殺", "科技大裁員", "降Token成本", "AI軍備燒錢"],
+        summary: "520當天台股遭遇外資資金大撤出。同時，美長債收益率再度走高，科技巨頭紛紛以「AI轉型」為掩護進行大規模裁員。皓哥直指核心：目前大模型消耗算力與電費過劇，如何快速降低「Token（文字處理最小單位）成本」成為AI商業化的唯一生死關鍵。",
+        tip: "AI大模型極度燒錢。如果回答小白的一句話，大模型背後要燒掉好幾塊美金的電費與算力，這生意根本做不下去。所以研發重點已經從大模型，轉移到如何利用『降Token成本、簡化算力』，這將是AI在2026能否活下來的唯一活路。"
+      }
+    ];
+
+    // 初始化日期選擇器
+    function initDateSelector() {
+      const dateGrid = document.getElementById('dateGrid');
+      dateGrid.innerHTML = '';
+      
+      financialKnowledgeDB.forEach((item, index) => {
+        const btn = document.createElement('button');
+        btn.className = `px-3 py-1.5 rounded-lg text-[11px] font-bold border transition duration-150 whitespace-nowrap ${
+          index === 0 
+          ? 'bg-teal-500/20 text-teal-400 border-teal-500/50' 
+          : 'bg-slate-900 text-slate-400 border-slate-800 hover:border-slate-700 hover:text-slate-200'
+        }`;
+        // 將格式改為適合極簡閱讀
+        const dateObj = new Date(item.date);
+        btn.textContent = `${dateObj.getMonth() + 1}/${dateObj.getDate()} (${getDayChinese(dateObj.getDay())})`;
+        btn.id = `date-btn-${item.date}`;
+        btn.onclick = () => selectDate(item.date);
+        dateGrid.appendChild(btn);
+      });
+
+      // 預設選擇最後一筆 (最新數據)
+      selectDate(financialKnowledgeDB[financialKnowledgeDB.length - 1].date);
+    }
+
+    function getDayChinese(day) {
+      const week = ['日', '一', '二', '三', '四', '五', '六'];
+      return week[day];
+    }
+
+    // 當前選擇的日期
+    let currentSelectedDate = '';
+
+    // 日期選擇邏輯
+    function selectDate(dateString) {
+      currentSelectedDate = dateString;
+      const data = financialKnowledgeDB.find(item => item.date === dateString);
+      if (!data) return;
+
+      // 更新所有日期按鈕樣式
+      financialKnowledgeDB.forEach(item => {
+        const btn = document.getElementById(`date-btn-${item.date}`);
+        if (btn) {
+          if (item.date === dateString) {
+            btn.className = "px-3 py-1.5 rounded-lg text-[11px] font-bold border transition duration-150 whitespace-nowrap bg-teal-500/20 text-teal-400 border-teal-500/50 shadow-lg shadow-teal-500/5";
+          } else {
+            btn.className = "px-3 py-1.5 rounded-lg text-[11px] font-bold border transition duration-150 whitespace-nowrap bg-slate-900 text-slate-400 border-slate-800 hover:border-slate-700 hover:text-slate-200";
+          }
+        }
+      });
+
+      // 更新卡片 DOM
+      document.getElementById('cardDate').textContent = `📅 2026 年 ${dateString.split('-')[1]} 月 ${dateString.split('-')[2]} 號`;
+      document.getElementById('cardTitle').textContent = data.title;
+      document.getElementById('cardSummary').textContent = data.summary;
+      document.getElementById('cardTip').textContent = data.tip;
+
+      // 更新關鍵字
+      const kwContainer = document.getElementById('cardKeywords');
+      kwContainer.innerHTML = '';
+      data.keywords.forEach(kw => {
+        const span = document.createElement('span');
+        span.className = "px-2.5 py-1 rounded-full text-[10px] font-semibold bg-teal-500/5 text-teal-300 border border-teal-500/10";
+        span.textContent = `# ${kw}`;
+        kwContainer.appendChild(span);
+      });
+    }
+
+    // 術語閃卡對應數據
+    const termDatabase = {
+      "股債雙殺": {
+        emoji: "📉",
+        term: "股債雙殺 (Stock-Bond Selloff)",
+        explanation: "在傳統金融教科書中，股票與債券價格通常是『互補』的：股市不好，資金會流入高安全性的債券，推升債券價格。但當『通膨失控再起』或是『無風險利率直逼5%以上』時，超高利息會壓扁股票估值，同時也讓低利率的舊國債淪為壁紙，導致大戶同時瘋狂拋售兩者，這就叫股債雙殺。",
+        scene: "在 2026 年 3 月 6 日與 30 日，中東油價大飆讓通膨恐慌重燃，10年期/30年期美債殖利率狂噴，導致全球遭遇了嚴重的股債雙殺大狂瀾。"
+      },
+      "利多出盡": {
+        emoji: "📰",
+        term: "利多出盡 (Sell the News)",
+        explanation: "當公司在公布一項重大利多消息（例如發布極佳的盈餘、拿下大訂單）之前，市場投資人因為極度期待，已經提早買進、將股價炒高了。等到利多消息真的公布那一天，最清醒的大戶反而趁著散戶蜂擁買入之際順勢大量出貨。市場上最大的買氣在公布一瞬間耗盡，導致股價不漲反跌。",
+        scene: "台積電（2330）在 2026 年 4 月 17 日大開法說會，公佈了極為亮眼超預期的盈餘。但因為前期乖離與熱情過高，公佈後卻大演『利多進出』，股價不漲反跌，完美演示了利多出盡魔咒。"
+      },
+      "Token成本": {
+        emoji: "🪙",
+        term: "Token 成本 (Token Cost)",
+        explanation: "Token 是 AI 大語言模型（如 ChatGPT）在處理、解構及生成文字、圖像時的最小語意單位。目前 AI 巨頭大打軍備競賽、算力驚人，回答一個簡單問題的電費與伺服器折舊成本極高。如果不能把每生成一萬個 Token 的成本大幅砍低，所有的 AI 商業應用都將持續虧損而無法普及。",
+        scene: "2026 年 5 月 20 日，皓哥點出 AI 軍備競賽已進入燒錢撞牆期，降低 Token 成本、進行算力極簡化，是所有 AI 應用在 2026 年下半場活下去的唯一解藥。"
+      },
+      "戰略石油": {
+        emoji: "🛢️",
+        term: "戰略石油儲備 (Strategic Petroleum Reserve)",
+        explanation: "國家為了防範突發性的地緣衝突、天災導致能源供應中斷，所提前在地下或特製鹽洞中儲藏的國家級緊急原油。在原油因戰爭供不應求、油價暴漲時，政府釋出它來平抑市場恐慌，但通常只具備短期的平抑效果，長期仍受國際地緣真實供需支配。",
+        scene: "在 2026 年 3 月 12 日，面對伊朗戰火擴大、原油破80直奔100美金，白宮緊急宣布大量釋出戰略石油，嘗試壓抑通膨氣焰。"
+      },
+      "VIX指數": {
+        emoji: "⚡",
+        term: "VIX 恐慌指數 (CBOE Volatility Index)",
+        explanation: "VIX 指數全稱為芝加哥期權交易所波動率指數。它主要是用來衡量標普 500 指數未來 30 天內期權市場的隱含波動。當指數高於 30，代表市場對未來有極高、不可預測的焦慮與極端恐慌；通常與大盤呈高度反向關係。",
+        scene: "在 2026 年 3 月 30 日至 31 日，因以色列突襲伊朗能源重地，胡塞組織伺機海上布雷，導致全球 VIX 指數瞬間擊穿 30 大關，引發了全球性的趨勢多單踩踏出逃。"
+      },
+      "金髮女孩經濟": {
+        emoji: "👧",
+        term: "金髮女孩經濟 (Goldilocks Economy)",
+        explanation: "源自英國童話中，女孩金髮姑娘選擇『不燙也不冰、剛剛好』的粥。在經濟學上，用來形容一個國家目前『經濟高增長（不冷）、且通膨率又被壓在極低健康水平（不過熱）』的完美黃金舒適圈。這是股市最容易長牛繁榮的完美環境。",
+        scene: "2026 年 4 月 15 日，台灣因 AI 硬體獨領全球，首季 GDP 狂噴卻能維持 1.2% 的官方通膨。但皓哥指出，這並非百分百健全，而是來自政府強行巨額吸收補貼水電、凍結油價的非自然金髮女孩現象。"
+      }
+    };
+
+    // 閃卡彈窗邏輯
+    function showFlashcard(termKey) {
+      const data = termDatabase[termKey];
+      if (!data) return;
+
+      document.getElementById('modalEmoji').textContent = data.emoji;
+      document.getElementById('modalTerm').textContent = data.term;
+      document.getElementById('modalExplanation').textContent = data.explanation;
+      document.getElementById('modalScene').textContent = data.scene;
+
+      const modal = document.getElementById('flashcardModal');
+      modal.classList.remove('hidden');
+      modal.classList.add('flex');
+    }
+
+    function closeFlashcard() {
+      const modal = document.getElementById('flashcardModal');
+      modal.classList.add('hidden');
+      modal.classList.remove('flex');
+    }
+
+    // 導報匯出與複製邏輯
+    function generateTextReport() {
+      const data = financialKnowledgeDB.find(item => item.date === currentSelectedDate);
+      if (!data) return "無數據";
+
+      return `========================================
+【早晨財經小白導讀 — 每日財經學習單】
+========================================
+📅 學習日期：2026年${currentSelectedDate.split('-')[1]}月${currentSelectedDate.split('-')[2]}日
+📺 皓哥速讀標題：${data.title}
+🏷️ 關鍵字彙：${data.keywords.join('、')}
+
+----------------------------------------
+🔍 皓哥核心觀點精華：
+----------------------------------------
+${data.summary}
+
+----------------------------------------
+💡 小白理財科普學堂：
+----------------------------------------
+${data.tip}
+
+========================================
+* 本資料完全採用【早晨財經速解讀】28期文獻為唯一知識庫開發。
+========================================`;
+    }
+
+    // 開啟匯出 Modal
+    document.getElementById('exportBtn').onclick = () => {
+      const reportText = generateTextReport();
+      document.getElementById('exportPre').textContent = reportText;
+      const modal = document.getElementById('exportModal');
+      modal.classList.remove('hidden');
+      modal.classList.add('flex');
+    };
+
+    function closeExportModal() {
+      const modal = document.getElementById('exportModal');
+      modal.classList.add('hidden');
+      modal.classList.remove('flex');
+    }
+
+    // 複製到剪貼簿 (考慮 iframe 限制，使用 document.execCommand)
+    function copyToClipboard() {
+      const text = document.getElementById('exportPre').textContent;
+      
+      // 創建臨時 textarea
+      const textarea = document.createElement('textarea');
+      textarea.value = text;
+      textarea.style.position = 'fixed'; // 避免網頁滾動
+      document.body.appendChild(textarea);
+      textarea.select();
+      
+      try {
+        const successful = document.execCommand('copy');
+        if (successful) {
+          showToast("📋 已成功複製學習單至剪貼簿！");
+        } else {
+          showToast("複製失敗，請手動全選複製。");
+        }
+      } catch (err) {
+        showToast("複製出錯，請手動全選複製。");
+      }
+      
+      document.body.removeChild(textarea);
+    }
+
+    // 下載純文字檔
+    function downloadAsText() {
+      const text = document.getElementById('exportPre').textContent;
+      const blob = new Blob([text], { type: 'text/plain;charset=utf-8' });
+      const url = URL.createObjectURL(blob);
+      const a = document.createElement('a');
+      a.href = url;
+      a.download = `早晨財經學習單-${currentSelectedDate}.txt`;
+      document.body.appendChild(a);
+      a.click();
+      document.body.removeChild(a);
+      URL.revokeObjectURL(url);
+      showToast("💾 成功下載文字檔！");
+    }
+
+    // 顯示 Toast 提示
+    function showToast(message) {
+      const toast = document.getElementById('toast');
+      document.getElementById('toastText').textContent = message;
+      toast.classList.remove('opacity-0', 'pointer-events-none');
+      toast.classList.add('opacity-100');
+
+      setTimeout(() => {
+        toast.classList.remove('opacity-100');
+        toast.classList.add('opacity-0', 'pointer-events-none');
+      }, 3000);
+    }
+
+
+    // ==========================================
+    // 內嵌 NotebookLM AI 問答助理核心 (調用 Gemini 2.5 Flash API)
+    // ==========================================
+    const apiKey = ""; // 執行環境會於運行時自動注入 Key，此處維持為空字串
+
+    // 指數級退避重試邏輯
+    async function fetchWithRetry(url, options, maxRetries = 5) {
+      for (let i = 0; i < maxRetries; i++) {
+        try {
+          const response = await fetch(url, options);
+          if (response.ok) {
+            return await response.json();
+          }
+        } catch (error) {
+          // 不在控制台打印重試信息，符合 CSP Guardrail 與 Silent Retry 規範
+        }
+        // 延遲：1s, 2s, 4s, 8s, 16s
+        const delay = Math.pow(2, i) * 1000;
+        await new Promise(resolve => setTimeout(resolve, delay));
+      }
+      throw new Error("API 調用在多次重試後均失敗。");
+    }
+
+    // 系統 Prompt 的建構：將 28 期核心文獻注入為系統知識庫
+    const systemPrompt = `你是一位親切、專業的財經導師「皓哥 AI 助理」，專門為「財金小白」解答問題。你的回答必須 100% 基於以下 2026 年 3 月至 5 月的真實事件數據（早晨財經速解讀精華），絕不能胡謅、不引用此知識庫之外的事件。
+
+【唯一核心知識庫數據如下】：
+${JSON.stringify(financialKnowledgeDB, null, 2)}
+
+請用【繁體中文】回答。
+1. 若用戶詢問的事件在知識庫中有精準對應（如：30年美債突破5%、中東停火、台積電利多出盡等），請務必精準帶出日期與當天皓哥的核心思維。
+2. 解釋時請用極其生動、小白聽得懂的比喻，避免使用無解釋的專業術語。
+3. 結構上多用條列式，結尾必須附上：
+【小白科普欄位】— 以10個字到50個字白話解釋此問題中出現最難的一個財經詞彙。`;
+
+    // 本地搜尋引擎（當 Gemini API 不可用時的超高真度 Fallback，確保持續運作）
+    function localSearchFallback(query) {
+      let matchedItems = [];
+      
+      // 基礎關鍵字對比
+      financialKnowledgeDB.forEach(item => {
+        let matchScore = 0;
+        if (query.includes(item.title) || item.keywords.some(kw => query.includes(kw))) {
+          matchScore += 5;
+        }
+        if (query.includes(item.summary) || query.includes(item.tip)) {
+          matchScore += 2;
+        }
+        // 切詞匹配
+        const words = ["黃金", "美債", "殖利率", "通膨", "油價", "中東", "台積電", "ETF", "軟體", "硬體", "Token", "降息", "泡沫", "聯聯會"];
+        words.forEach(w => {
+          if (query.includes(w) && (item.title.includes(w) || item.summary.includes(w))) {
+            matchScore += 1;
+          }
+        });
+
+        if (matchScore > 0) {
+          matchedItems.push({ item, score: matchScore });
+        }
+      });
+
+      // 排序
+      matchedItems.sort((a, b) => b.score - a.score);
+
+      if (matchedItems.length > 0) {
+        const best = matchedItems[0].item;
+        return `【在地知識庫搜尋結果：精準匹配 2026-${best.date.split('-')[1]}-${best.date.split('-')[2]} 集數】
+<br><br>
+親愛的小白同學，關於你問的問題，皓哥在 <strong>${best.date} (《${best.title}》)</strong> 中有非常深入的剖析：
+<br><br>
+📌 <strong>皓哥的核心解析：</strong><br>
+${best.summary}
+<br><br>
+💡 <strong>小白必讀比喻：</strong><br>
+${best.tip}
+<br><br>
+🔍 <strong>當期核心關鍵字：</strong> ${best.keywords.join('、')}
+<br><br>
+【小白科普欄位】 — 本集核心概念：${best.keywords[0]}，指當天節目中最關鍵的宏觀驅動力，影響著你口袋的估值波動。`;
+      } else {
+        // 泛用性回答
+        return `親愛的小白同學！你問的問題非常有趣，但目前在 2026 年 3 月至 5 月的 28 期節目知識庫中，沒有直接精確對應的文獻喔。<br><br>
+不過，皓哥建議你看看 2026 全球的大主線：<strong>中東地緣通膨威脅、美債直逼 5%、以及 AI 硬體領漲東移</strong>。你可以試著詢問關於「Token 成本為何是 AI 活路」、「台積電利多出盡」或「為什麼美債破 5% 股債會雙殺」等主題，皓哥能為你提供最完美的解答喔！`;
+      }
+    }
+
+    // 問答功能
+    const chatForm = document.getElementById('chatForm');
+    const chatInput = document.getElementById('chatInput');
+    const chatContainer = document.getElementById('chatContainer');
+
+    chatForm.onsubmit = async (e) => {
+      e.preventDefault();
+      const userText = chatInput.value.trim();
+      if (!userText) return;
+
+      appendMessage("user", userText);
+      chatInput.value = '';
+
+      // 顯示載入中
+      const loadingId = appendMessage("ai-loading", "");
+
+      try {
+        // 如果沒有 API 密鑰，直接啟用極速、超高精確度的本地搜尋引擎 Fallback
+        if (!apiKey || apiKey === "") {
+          setTimeout(() => {
+            removeLoading(loadingId);
+            const fallbackResponse = localSearchFallback(userText);
+            appendMessage("ai", fallbackResponse);
+          }, 800);
+          return;
+        }
+
+        // 調用 Gemini API 2.5 Flash
+        const url = `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-preview-09-2025:generateContent?key=${apiKey}`;
+        const payload = {
+          contents: [{ parts: [{ text: userText }] }],
+          systemInstruction: { parts: [{ text: systemPrompt }] }
+        };
+
+        const result = await fetchWithRetry(url, {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify(payload)
+        });
+
+        removeLoading(loadingId);
+
+        const replyText = result.candidates?.[0]?.content?.parts?.[0]?.text;
+        if (replyText) {
+          // 將 markdown 換行轉成 HTML 換行
+          const formattedReply = replyText
+            .replace(/\n/g, '<br>')
+            .replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>');
+          appendMessage("ai", formattedReply);
+        } else {
+          // 若無有效候選，呼叫 Fallback
+          const fallbackResponse = localSearchFallback(userText);
+          appendMessage("ai", fallbackResponse);
+        }
+
+      } catch (err) {
+        removeLoading(loadingId);
+        // 出現任何故障，自動、流暢地使用本地搜尋引擎
+        const fallbackResponse = localSearchFallback(userText);
+        appendMessage("ai", `【AI 通訊忙碌中，皓哥在地化引擎啟動】<br><br>${fallbackResponse}`);
+      }
+    };
+
+    // 快捷問題
+    function askPreset(question) {
+      chatInput.value = question;
+      chatForm.dispatchEvent(new Event('submit'));
+    }
+
+    // 輔助：添加聊天氣泡
+    function appendMessage(sender, text) {
+      const msgId = 'msg-' + Date.now();
+      const div = document.createElement('div');
+      div.id = msgId;
+      div.className = "flex items-start space-x-2.5 animate-fadeIn";
+
+      if (sender === "user") {
+        div.innerHTML = `
+          <div class="flex-grow"></div>
+          <div class="bg-teal-500 text-slate-950 font-medium rounded-2xl p-3.5 max-w-[85%] leading-relaxed select-text">
+            ${text}
+          </div>
+          <div class="w-6 h-6 rounded-full bg-slate-800 flex items-center justify-center text-[10px] font-bold text-slate-300 shrink-0">
+            ME
+          </div>
+        `;
+      } else if (sender === "ai") {
+        div.innerHTML = `
+          <div class="w-6 h-6 rounded-full bg-gradient-to-tr from-teal-500 to-emerald-400 flex items-center justify-center text-[10px] font-bold text-slate-950 shrink-0">
+            皓
+          </div>
+          <div class="bg-slate-950 border border-slate-800 rounded-2xl p-3.5 max-w-[85%] text-slate-300 leading-relaxed select-text">
+            ${text}
+          </div>
+        `;
+      } else if (sender === "ai-loading") {
+        div.innerHTML = `
+          <div class="w-6 h-6 rounded-full bg-gradient-to-tr from-teal-500 to-emerald-400 flex items-center justify-center text-[10px] font-bold text-slate-950 shrink-0">
+            皓
+          </div>
+          <div class="bg-slate-950 border border-slate-800 rounded-2xl p-3.5 max-w-[85%] text-slate-500 flex items-center space-x-1">
+            <span class="w-1.5 h-1.5 rounded-full bg-teal-500 animate-bounce"></span>
+            <span class="w-1.5 h-1.5 rounded-full bg-teal-500 animate-bounce [animation-delay:0.2s]"></span>
+            <span class="w-1.5 h-1.5 rounded-full bg-teal-500 animate-bounce [animation-delay:0.4s]"></span>
+            <span class="text-[10px] text-slate-500 pl-1">皓哥正在翻閱 28 期核心知識庫...</span>
+          </div>
+        `;
+      }
+
+      chatContainer.appendChild(div);
+      chatContainer.scrollTop = chatContainer.scrollHeight;
+      return msgId;
+    }
+
+    function removeLoading(id) {
+      const el = document.getElementById(id);
+      if (el) el.remove();
+    }
+
+    // 啟動初始化
+    window.onload = function() {
+      initDateSelector();
+    };
+  </script>
+</body>
+</html>
